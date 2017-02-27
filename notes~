@@ -1,0 +1,2 @@
+- gestion de collision : player.c
+   modification de player_move_aux(), cell_scenery return 0 et cell_box return 0

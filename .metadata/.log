@@ -1,0 +1,65 @@
+!SESSION 2017-02-06 08:32:07.480 -----------------------------------------------
+eclipse.buildId=4.3.2.3fc20
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 4 0 2017-02-06 08:41:50.661
+!MESSAGE org.eclipse.equinox.internal.p2.touchpoint.natives.actions.UnzipAction error unzipping zipfile: /net/malt/t/nbabel/.eclipse/org.eclipse.platform_793567567_linux_gtk_x86_64/p2/org.eclipse.equinox.p2.core/cache/binary/org.eclipse.cdt_root_8.3.0.201402142303destination: /usr/lib64/eclipse
+!SESSION 2017-02-06 08:41:58.784 -----------------------------------------------
+eclipse.buildId=4.3.2.3fc20
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-06 08:43:18.168
+!MESSAGE Error: Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:175)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1334)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1378)
+	at org.eclipse.cdt.core.CProjectNature.addNature(CProjectNature.java:78)
+	at org.eclipse.cdt.core.CProjectNature.addCNature(CProjectNature.java:44)
+	at org.eclipse.cdt.core.CCorePlugin$2.run(CCorePlugin.java:870)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:848)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:838)
+	at org.eclipse.cdt.managedbuilder.ui.wizards.NewMakeProjFromExisting$1.execute(NewMakeProjFromExisting.java:94)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: OK
+Contains: /net/malt/t/nbabel/Documents/progc/progcav/Projet overlaps the workspace location: /net/malt/t/nbabel/Documents/progc/progcav/Projet
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-02-06 08:43:18.169
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-02-06 08:43:18.169
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-02-06 08:43:18.169
+!MESSAGE /net/malt/t/nbabel/Documents/progc/progcav/Projet overlaps the workspace location: /net/malt/t/nbabel/Documents/progc/progcav/Projet
+
+!ENTRY org.eclipse.cdt.core 4 0 2017-02-06 08:43:18.176
+!MESSAGE Error: Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:175)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1334)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1378)
+	at org.eclipse.cdt.core.CProjectNature.addNature(CProjectNature.java:78)
+	at org.eclipse.cdt.core.CCProjectNature.addCCNature(CCProjectNature.java:28)
+	at org.eclipse.cdt.managedbuilder.ui.wizards.NewMakeProjFromExisting$1.execute(NewMakeProjFromExisting.java:98)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: OK
+Contains: /net/malt/t/nbabel/Documents/progc/progcav/Projet overlaps the workspace location: /net/malt/t/nbabel/Documents/progc/progcav/Projet
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-02-06 08:43:18.176
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-02-06 08:43:18.176
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-02-06 08:43:18.176
+!MESSAGE /net/malt/t/nbabel/Documents/progc/progcav/Projet overlaps the workspace location: /net/malt/t/nbabel/Documents/progc/progcav/Projet
