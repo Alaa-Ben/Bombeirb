@@ -158,7 +158,7 @@ struct map* map_get_default(void)
 {
 	struct map* map = map_new(MAP_WIDTH, MAP_HEIGHT);
 
-	unsigned char themap[MAP_WIDTH * MAP_HEIGHT] = {
+	unsigned int themap[MAP_WIDTH * MAP_HEIGHT] = {
 	  CELL_PLAYER, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY,
 	  CELL_BOX, CELL_BOX, CELL_BOX, CELL_EMPTY, CELL_STONE, CELL_EMPTY, CELL_STONE, CELL_STONE, CELL_STONE, CELL_STONE, CELL_EMPTY, CELL_EMPTY,
 	  CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_EMPTY, CELL_STONE, CELL_BOX, CELL_STONE, CELL_EMPTY, CELL_EMPTY, CELL_STONE, CELL_EMPTY, CELL_EMPTY,
@@ -180,14 +180,14 @@ struct map* map_get_default(void)
 }
 
 
-struct map* map_load(const char* map_name){
+struct map* map_load(char* map_name){
+
 
 	  int width = 0;
 	  int height = 0;
 	  int i = 0;
-
 	  FILE* fichier = NULL;
-	  fichier = fopen("fichier.txt","r");
+	  fichier = fopen(map_name,"r");
 
 	  char* chaine = malloc(100*sizeof(char));
 	  fgets(chaine,100,fichier);
@@ -206,10 +206,18 @@ struct map* map_load(const char* map_name){
 
 	  height=atoi(chaine);
 
+	  struct map* map = map_new(12,12);
 	  //checkpoint
-	  unsigned char themap[width*height];
+
+	  unsigned int themap[width*height];
 	  i = 0;
 	  for (int k = 0; k<width*height;k++){
 	    fscanf(fichier,"%i",&themap[k]);
 	  }
+
+	  for (int l = 0;l<height*width;l++){
+		  map->grid[l] = themap[l];
+	  }
+
+	  return map;
 }

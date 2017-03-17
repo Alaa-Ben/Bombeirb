@@ -24,6 +24,11 @@ enum direction {
 	EAST //3
 };
 
-#define map1 "./progc/map1.txt"
+#define map1 "../Projet/maps/map1"
+#define map2 "../Projet/maps/map2"
+#define map3 "../Projet/maps/map3"
+#define map4 "../Projet/maps/map4"
+#define map5 "../Projet/maps/map5"
+#define NIVEAUX 5
 
 #endif /* CONSTANT */

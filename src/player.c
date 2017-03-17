@@ -6,7 +6,7 @@
 #include <window.h>
 #include <misc.h>
 #include <constant.h>
-
+#include <game.h>
 struct player {
 	int x, y;
 	enum direction current_direction;
@@ -97,6 +97,7 @@ static int player_move_aux(struct player* player, struct map* map, int x, int y)
 	case CELL_PLAYER:
 		break;
 
+
 	default:
 		break;
 	}
@@ -125,6 +126,7 @@ int player_move(struct player* player, struct map* map) {
 			else if ((map_get_cell_type(map,x, y-1) == CELL_BOX) && (map_is_inside(map,x,y-1)) && (map_get_cell_type(map,x,y-2)!=CELL_EMPTY)) {
 				move=0;
 			}
+
 			else {
 				player ->y--;
 				move=1;
@@ -178,7 +180,7 @@ int player_move(struct player* player, struct map* map) {
 		break;
 
 	case EAST:
-		if ((player_move_aux(player, map, x+1, y)) && (map_is_inside(map,x+1,y))) {
+		if ((player_move_aux(player, map, x+1, y)) && (map_is_inside(map,x+2,y))) {
 					if ((map_get_cell_type(map,x+1, y) == CELL_BOX) && (map_get_width(map)>x+2) && (map_get_cell_type(map,x+2,y)==CELL_EMPTY)) {
 						map_set_cell_type(map,x+1,y,CELL_EMPTY);
 						map_set_cell_type(map,x+2,y,CELL_BOX);

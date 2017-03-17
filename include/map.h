@@ -70,4 +70,7 @@ struct map* map_get_default();
 // Display the map on the screen
 void map_display(struct map* map);
 
+//Loads the map
+struct map* map_load(char* map_name);
+
 #endif /* MAP_H_ */

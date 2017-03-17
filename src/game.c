@@ -1,10 +1,11 @@
 #include <assert.h>
 #include <time.h>
-
+#include <map.h>
 #include <game.h>
 #include <misc.h>
 #include <window.h>
 #include <sprite.h>
+#include <constant.h>
 
 struct game {
 	struct map** maps;       // the game's map
@@ -17,10 +18,22 @@ struct game* game_new(void) {
 	sprite_load(); // load sprites into process memory
 
 	struct game* game = malloc(sizeof(*game));
-	game->maps = malloc(sizeof(struct game));
-	game->maps[0] = map_get_default();
-	game->levels = 1;
+	game->maps = malloc (sizeof(struct map *) * 1);
+	game->maps[0] = map_load(map1);
+	game->levels = NIVEAUX;
 	game->current = 0;
+
+	game->player = player_init(1);
+	player_from_map(game->player, game->maps[0]); // get x,y of the player on the first map
+
+	return game;
+}
+struct game* game_next_level(struct game* game) {
+	sprite_load(); // load sprites into process memory
+	char *cartes = {map1,map2,map3,map4,map5};
+	game->maps = malloc (sizeof(struct map *) * 1);
+	game->maps[0] = map_load(cartes[(game->current) + 1]);
+	game->current += 1;
 
 	game->player = player_init(1);
 	player_from_map(game->player, game->maps[0]); // get x,y of the player on the first map
