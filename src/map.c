@@ -206,7 +206,7 @@ struct map* map_load(char* map_name){
 
 	  height=atoi(chaine);
 
-	  struct map* map = map_new(12,12);
+	  struct map* map = map_new(width,height);
 	  //checkpoint
 
 	  unsigned int themap[width*height];

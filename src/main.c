@@ -4,7 +4,7 @@
 #include <game.h>
 #include <window.h>
 #include <misc.h>
-
+#include <map.h>
 
 int main(int argc, char *argv[]) {
 
@@ -15,8 +15,10 @@ int main(int argc, char *argv[]) {
 
 	struct game* game = game_new();
 
-	window_create(SIZE_BLOC * MAP_WIDTH,
-	SIZE_BLOC * MAP_HEIGHT + BANNER_HEIGHT + LINE_HEIGHT);
+	int map_height = game->maps[0]->height;
+	int map_width = game->maps[0]->width;
+	window_create(SIZE_BLOC * map_width,
+	SIZE_BLOC * map_height+ BANNER_HEIGHT + LINE_HEIGHT);
 
 	SDL_EnableKeyRepeat(SDL_DEFAULT_REPEAT_DELAY, SDL_DEFAULT_REPEAT_INTERVAL);
 
